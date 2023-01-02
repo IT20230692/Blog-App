@@ -1,5 +1,5 @@
 import React from 'react'
-import pic1 from '../images/pic1.jpg';
+import pic1 from '../../images/pic1.jpg';
 import '../header/header.css';
 
 export default function Header() {
@@ -17,3 +17,4 @@ export default function Header() {
     </div>
   )
 }
+ 
