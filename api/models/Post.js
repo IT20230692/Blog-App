@@ -20,7 +20,8 @@ const PostSchema = new mongoose.Schema(
         },
     },
     {
-        timestamps:true
+        timestamps:true,
+        versionKey: false, // Here You have to add.
     }
 );
 

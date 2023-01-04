@@ -2,10 +2,13 @@ const express = require('express');
 const app = express();
 const dotenv =require("dotenv");
 const mongoose = require("mongoose");
-
+const authRoute = require("./routes/auth");
+const { json } = require('express');
 
 
 dotenv.config();
+app.use(express.json());
+
 const PORT = process.env.PORT_NUM;
 
 mongoose.set("strictQuery", false);
@@ -18,6 +21,8 @@ mongoose.connect(process.env.MONGO_URL,{
 })
 .catch((err) => console.log(`DB connection error`,err));
 
+
+app.use("/api/auth", authRoute);
 
 app.listen(PORT, ()=>{
     console.log(`Backend is running...  ${PORT}`);
