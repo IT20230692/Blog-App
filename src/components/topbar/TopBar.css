@@ -24,8 +24,23 @@
  .topIcon{
     font-size: 20px;
     margin-right: 10px;
-    color: #444;
     cursor: pointer;
+ }
+
+ .topIcon.fb{
+   color: #3b5998;
+ }
+
+ .topIcon.twitter{
+   color: #00acee;
+ }
+
+ .topIcon.pinterest{
+   color: 	#E60023;
+ }
+
+ .topIcon.inster{
+   color: #e95950;
  }
  .topImg{
     width: 40px;
