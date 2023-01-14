@@ -19,7 +19,7 @@ function App() {
       <Route  path="/register" element={user ? <Home/> :<Register/>}></Route>
       <Route  path="/write" element={user ? <Home/> :<Write/>}></Route>
       <Route  path="/settings" element={user ? <Home/> :<Settings/>}></Route>
-      <Route  path="/post/postId" element={<Single/>}></Route> 
+      <Route  path="/post/:postId" element={<Single/>}></Route> 
       </Routes>
       </BrowserRouter>
   );
