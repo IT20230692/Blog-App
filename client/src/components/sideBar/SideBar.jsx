@@ -1,6 +1,22 @@
-import "./sideBar.css"
+import { useEffect, useState } from "react";
+import "./sideBar.css";
+import axios from "axios";
+
+
+
 
 export default function SideBar() {
+ const [cats, setCats] = useState([]);
+
+ useEffect(()=>{
+  const getCats = async ()=>
+  {
+    const res = await axios.get("/categories")
+    setCats(res.data);
+  }
+  getCats();
+ })
+
   return (
     <div className="sideBar">
         <div className="sideBarItem">
@@ -21,12 +37,9 @@ export default function SideBar() {
         <div className="sideBarItem">
           <span className="sideBarTitle">CATEGRORIES</span>
           <ul className="sideBarList">
-            <li className="sideBarListItem">Life</li>
-            <li className="sideBarListItem">Music</li>
-            <li className="sideBarListItem">Style</li>
-            <li className="sideBarListItem">Sport</li>
-            <li className="sideBarListItem">Tech</li>
-            <li className="sideBarListItem">Cinema</li>
+            {cats.map((c)=>(
+            <li className="sideBarListItem">{c.name}</li>
+            ))}
           </ul>
         </div>
         <div className="sideBarItem">
