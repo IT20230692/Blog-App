@@ -18,6 +18,10 @@ const PostSchema = new mongoose.Schema(
       type: 'array',
       required: false,
     },
+      desc: {
+      type: 'string',
+      required: false,
+    },
   },
   {
     timestamps: true,
