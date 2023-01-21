@@ -64,3 +64,23 @@
     margin: 15px;
     cursor: pointer;
 }
+
+
+.sideBarIcon.fb{
+    color: #3b5998;
+  }
+ 
+  .sideBarIcon.twitter{
+    color: #00acee;
+  }
+ 
+  .sideBarIcon.pinterest{
+    color: 	#E60023;
+  }
+ 
+  .sideBarIcon.inster{
+    color: #e95950;
+  }
+  .sideBarIcon.git{
+    color: #332e2d;
+  }

@@ -20,7 +20,7 @@ export default function SinglePost() {
       const res = await axios.get('/posts/' + path);
       setPosts(res.data);
       setTitle(res.data.title);
-      setTitle(res.data.desc);
+      setDesc(res.data.desc);
     };
     getPost();
   }, [path]);
@@ -90,6 +90,7 @@ export default function SinglePost() {
         {updateMode ? (
           <textarea
             className='singlePostDescInput'
+           
             value={desc}
             onChange={(e) => setDesc(e.target.value)}
           />
