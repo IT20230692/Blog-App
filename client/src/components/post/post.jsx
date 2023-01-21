@@ -1,3 +1,4 @@
+import React from 'react'
 import './post.css';
 import { Link } from 'react-router-dom';
 
@@ -24,3 +25,4 @@ export default function Post({ post }) {
     </div>
   );
 }
+  
